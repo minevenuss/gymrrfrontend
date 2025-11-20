@@ -12,7 +12,7 @@ export const AUTH_ROUTES: Routes = [
             },
             {
                 path: 'register',
-                loadComponent: () => import('./pages/register-page/register-page.component').then(m => m.RegisterPageComponent),
+                //loadComponent: () => import('./pages/register-page/register-page.component').then(m => m.RegisterPageComponent), Esto no existe aun
                 title: 'Registrarse - GymRR'
             },
             {path: '', redirectTo: 'login', pathMatch: 'full' }

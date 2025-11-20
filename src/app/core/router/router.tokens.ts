@@ -9,6 +9,6 @@ export const ROUTE_PREFIXES = new InjectionToken('ROUTE_PREFIXES',{
         CARGOS: '/cargos',
         TIPOS_SUSCRIPCION: '/tipos-suscripcion',
         SUSCRIPCIONES: '/suscripciones',
-})
+    })
 });
 

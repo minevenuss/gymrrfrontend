@@ -1,5 +1,6 @@
 import {inject, InjectionToken, Provider} from '@angular/core';
-import {AuthService} from '../../features/services/auth.service';
+
+import { AuthService } from '../../features/auth';
 
 export const IS_AUTHENTICATED = new InjectionToken<boolean>('IS_AUTHENTICATED');
 

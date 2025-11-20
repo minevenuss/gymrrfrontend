@@ -15,8 +15,8 @@ import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
             </button>
         </form>
     `
-
 })
+
 export class LoginFormComponent {
     private readonly fb = inject(FormBuilder)
     @Input() loading = false;

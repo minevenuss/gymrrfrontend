@@ -1,7 +1,7 @@
 export interface User {
     id: number;
     userName: string;
-    email:string;
+    email: string;
     primerNombre: string;
     primerApellido: string;
     fechaCreacion: Date;

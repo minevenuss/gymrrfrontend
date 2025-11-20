@@ -10,7 +10,7 @@ import { Token } from '@angular/compiler';
 export class AuthService {
     private readonly api = inject(AuthApi)
     private readonly tokenStorage = inject(TokenStorageService)
-    private readonly router = inject(Router)
+    //private readonly router = inject(Router)
     private readonly nav = inject(NavigationService)
 
     private user = signal<User| null>(this.tokenStorage.getUser());

@@ -1,0 +1,10 @@
+<div class="text-center">
+    <h2 class="mb-1 text-primary">Unete y encuentra tu subscripcion perfecta</h2>
+    <p class="text-muted mb-4">Crea tu cuenta en un par de segundos</p>
+
+    <app-register-form [loading]="auth.isLoading$()" (submitRegister)="onSubmit($event)"></app-register-form>
+
+    <p class="login-link mt-4">
+        ¿Ya tienes una cuenta? <a routerLink="../login" class="text-primary fw-bold">Iniciar sesión</a>
+    </p>
+</div>

@@ -1,0 +1,5 @@
+<div class="text-center">
+    <h2 class="mb-1 text-primary">Bienvenido</h2>
+    <p class="text-muted mb-4">Por favor, ingresa tus datos para continuar</p>
+    <app-login-form [loading]="auth.isLoading$()" (submitLogin)="onSubmit($event)"></app-login-form>
+</div>

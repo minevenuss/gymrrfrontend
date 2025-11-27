@@ -1,0 +1,24 @@
+<form (ngSubmit)="submitRegister.emit(form.getRawValue())" [class.loading]="loading">
+
+    <div class="row">
+        <div class="col-16 mb-3">
+            <input class="form-control" formControlName="primerNombre" placeholder="Nombre">
+        </div>
+        <div class="col-16 mb-3">
+            <input class="form-control" formControlName="primerApellido"  placeholder="Apellido">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" formControlName="userName" placeholder="Nombre de usuario">
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" formControlName="email" placeholder="Correo electrónico">
+        </div>
+        <div class="mb-4">
+            <input type="password" class="form-control" formControlName="password"  placeholder="Contraseña">
+        </div>
+        <button class="btn btn-primary btn-lg w-100" type="submit" [disabled]="loading">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm me-2"></span>
+            {{ loading ? 'Creando su cuenta' : 'Registrarse' }}
+        </button>
+    </div>
+</form>

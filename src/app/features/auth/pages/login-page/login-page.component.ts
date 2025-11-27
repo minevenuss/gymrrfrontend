@@ -1,33 +1,18 @@
 import {Component, inject} from '@angular/core';
 import { AuthService } from '../../services/auth.service';
-import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, Validators, ɵInternalFormsSharedModule } from '@angular/forms';
 import {LoginFormComponent} from '../../components/login-form/login-form.component'
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-login-page',
     standalone: true,
-    imports: [LoginFormComponent],
-    template: `
-    <div class="login-page">
-      <h2>Bienvenido a GymRR</h2>
-      
-      <app-login-form
-        [loading]="auth.isLoading$()"
-        (submitLogin)="onSubmit($event)"
-      />
-    </div>
-  `,
-  styles: [`
-    .login-page { 
-      max-width: 400px; 
-      margin: 0 auto; 
-      padding: 2rem;
-      text-align: center;
-    }
-  `]
+    imports: [LoginFormComponent, ɵInternalFormsSharedModule, CommonModule],
+    templateUrl: './login-page.component.html',
+    styleUrls: ['./login-page.component.css'],
 })
 export class LoginPageComponent {
-    private readonly fb = inject(FormBuilder);
+    // private readonly fb = inject(FormBuilder);
     readonly auth = inject(AuthService);
 
     onSubmit(credentials:{email:string;password:string}){

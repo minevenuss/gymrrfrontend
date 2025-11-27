@@ -1,23 +1,12 @@
 import {Component, EventEmitter, Input, Output, inject} from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 @Component ({
     selector: 'app-register-form',
     standalone:true,
-    imports: [ReactiveFormsModule],
-    template: `
-    <form (ngSubmit)="submitRegister.emit(form.getRawValue())" [class.loading]="loading">
-      <input formControlName="primerNombre" placeholder="Nombre" required />
-      <input formControlName="primerApellido" placeholder="Apellido" required />
-      <input formControlName="email" type="email" placeholder="Email" required />
-      <input formControlName="password" type="password" placeholder="Contraseña" required />
-      <input formControlName="userName" type="Usuario" placeholder="Usuario" required="">
-
-      <button type="submit" [disabled]="loading">
-        {{ loading ? 'Creando cuenta...' : 'Registrarse' }}
-      </button>
-    </form>
-  `
+    imports: [ReactiveFormsModule, CommonModule],
+    templateUrl: './register-form.component.html',
+    styleUrls: ['./register-form.component.css'],
 
 })
 export class RegisterFormComponent{

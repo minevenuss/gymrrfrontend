@@ -1,0 +1,13 @@
+.login-page {
+  text-align: center;
+}
+
+.login-page h2 {
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: #29335C;
+}
+
+.login-page p {
+  font-size: 1.1rem;
+}

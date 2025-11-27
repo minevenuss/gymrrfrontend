@@ -1,20 +1,12 @@
 import {Component, EventEmitter, Input, Output, inject} from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 @Component({
     selector: 'app-login-form',
     standalone: true,
-    imports: [ReactiveFormsModule],
-    template: `
-        <form (ngSubmit)="submitLogin.emit(form.getRawValue())" [class.loading] ="loading">
-            <input formControlName="email" type="email" placeholder="Email" required/>
-            <input formControlName="password" type="password" placeholder="Contraseña" required />
-
-            <button type= "submit" [disabled]="loading">
-                {{loading ? 'Cargando...' : 'Iniciar Sesión'}}
-            </button>
-        </form>
-    `
+    imports: [ReactiveFormsModule, CommonModule],
+    templateUrl: './login-form.component.html',
+    styleUrls: ['./login-form.component.css'],
 })
 
 export class LoginFormComponent {

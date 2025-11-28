@@ -39,5 +39,25 @@ TIPOS_SUSCRICIPION: {
     CREATE: '/tipos-suscripcion',
     UPDATE: (id: number) => `/tipos-suscripcion/${id}`,
     DELETE: (id: number) => `/tipos-suscripcion/${id}`
+},
+
+ACTIVIDADES: {
+    GET_ALL: '/actividades',
+    GET_BY_ID: (id:number) => `/actividades/${id}`,
+    CREATE: '/actividades',
+    UPDATE: (id: number) => `/actividades/${id}`,
+    DELETE: (id: number) => `/actividades/${id}`
+
+},
+
+INVENTARIO: {
+    GET_ALL: '/inventario',
+    GET_BY_ID: (id:number) => `/inventarui/${id}`,
+    CREATE: '/actividades',
+    UPDATE: (id: number) => `/inventario/${id}`,
+    DELETE: (id: number) => `/inventario/${id}`
+
 }
+
+
 };

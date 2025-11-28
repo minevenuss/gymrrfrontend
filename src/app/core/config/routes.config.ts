@@ -17,6 +17,11 @@ export const APP_ROUTES: Routes = [
       path: 'users',
       loadChildren: () =>
          import('../../features/users/users.routes').then(m=> m.USERS_ROUTES)
+   },
+    {
+      path: 'actividades',
+      loadChildren: () =>
+         import('../../features/actividades/actividades.routes').then(m=> m.ACTIVIDADES_ROUTES)
    }
 
 //    {

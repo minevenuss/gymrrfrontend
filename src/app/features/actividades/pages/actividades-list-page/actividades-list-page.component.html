@@ -1,0 +1,27 @@
+<div class="min-vh-100 bg-light">
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+                <h1 class="display-5 fw-bold text-primary mb-0">Gestión de Actividades</h1>
+                <button class="btn btn-success btn-lg shadow-sm px-4" (click)="openCreateModal()">
+                    Nueva Actividad
+                </button>
+        </div>
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                <div class="card-body p-0">
+                     <app-actividades-table 
+                        [actividad]="service.actividades$()"
+                        (edit) = "openEditModal($event)"
+                        (delete) = "service.delete($event)"
+                        > </app-actividades-table>
+                </div>
+            </div>
+            <app-actividad-modal
+            *ngIf="showModal"
+            [actividad]="selectedActivity"
+            [isEdit]="!!selectedActivity"
+            (save)="onSave($event)"
+            (close)="showModal = false"
+        > </app-actividad-modal>
+    </div>
+</div>
+    

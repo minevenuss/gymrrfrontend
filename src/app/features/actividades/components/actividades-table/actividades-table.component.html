@@ -1,0 +1,45 @@
+<div class="table-responsive">
+    <table class="table table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                 <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Horario</th>
+                <th>Cupo</th>
+                <th>Estado</th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let actividad of actividad">
+                <td>{{ actividad.nombre }}</td>
+
+                <td>{{ actividad.fecha | date: 'yyyy-MM-dd' }}</td>
+
+                <td>
+                    {{ actividad.horaInicio }} - {{ actividad.horaFin }}
+                </td>
+
+                <td>{{ actividad.cupoMaximo }}</td>
+
+                <td>
+                    <span class="badge" [class]="getEstadoBadge(actividad.estado)">
+                        {{ actividad.estado }}
+                    </span>
+                </td>
+
+                <td class="text-center">
+                    <button class="btn btn-sm btn-outline-primary me-2"
+                            (click)="edit.emit(actividad)">
+                        Editar
+                    </button>
+
+                    <button class="btn btn-sm btn-outline-danger"
+                            (click)="delete.emit(actividad.idEvento)">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,26 @@
+<div class="table-responsive">
+    <table class="table table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.primerNombre }} {{ user.primerApellido }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <span class="badge" [class]="getRoleBadge(user.rol)">
+                    {{ user.rol }}
+                    </span>
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-sm btn-outline-primary me-2" (click)="edit.emit(user)">Editar</button>
+                    <button class="btn btn-sm btn-outline-danger" (click)="delete.emit(user.id)">Eliminar</button>
+                </td>
+        </tbody>
+    </table>
+</div>

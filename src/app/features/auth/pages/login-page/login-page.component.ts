@@ -3,11 +3,12 @@ import { AuthService } from '../../services/auth.service';
 import { ReactiveFormsModule, FormBuilder, Validators, ɵInternalFormsSharedModule } from '@angular/forms';
 import {LoginFormComponent} from '../../components/login-form/login-form.component'
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-login-page',
     standalone: true,
-    imports: [LoginFormComponent, ɵInternalFormsSharedModule, CommonModule],
+    imports: [LoginFormComponent, ɵInternalFormsSharedModule, CommonModule, RouterLink],
     templateUrl: './login-page.component.html',
     styleUrls: ['./login-page.component.css'],
 })

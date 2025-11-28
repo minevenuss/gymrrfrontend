@@ -5,9 +5,21 @@
 .login-page h2 {
   font-weight: 800;
   font-size: 2.2rem;
-  color: #29335C;
+  color: #29335C !important;
 }
-
+.text-primary {
+    color: #29335C !important;
+}
 .login-page p {
   font-size: 1.1rem;
+}
+.register-link a {
+  color: #DB2B39 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  color: #F3A712 !important;
+  text-decoration: underline;
 }

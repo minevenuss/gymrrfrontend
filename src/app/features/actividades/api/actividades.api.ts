@@ -20,7 +20,7 @@ export class ActividadesApi{
 
     //obtener actividades por su id
     getById(id: number){
-        return this.http.get<ApiResponse<Actividades>>(this.base + API_CONFIG.ACTIVIDADES.GET_BY_ID);
+        return this.http.get<ApiResponse<Actividades>>(this.base + API_CONFIG.ACTIVIDADES.GET_BY_ID(id));
     }
 
     //crear una nueva actividad

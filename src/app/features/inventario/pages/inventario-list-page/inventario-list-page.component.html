@@ -1,0 +1,32 @@
+<div class="min-vh-100 bg-light">
+    <div class="container py-5">
+
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h1 class="display-5 fw-bold text-primary mb-0">Gestión de Inventario</h1>
+
+            <button class="btn btn-success btn-lg shadow-sm px-4" (click)="openCreateModal()">
+                Nuevo
+            </button>
+        </div>
+
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+            <div class="card-body p-0">
+
+                <app-inventario-table
+                    [inventarios]="service.inventario$()"
+                    (edit)="openEditModal($event)"
+                    (delete)="service.delete($event)">
+                </app-inventario-table>
+
+            </div>
+        </div>
+
+        <app-inventario-modal
+            *ngIf="showModal"
+            [isEdit]="!!selectedInventario"
+            (save)="onSave($event)"
+            (close)="showModal = false">
+        </app-inventario-modal>
+
+    </div>
+</div>

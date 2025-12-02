@@ -18,8 +18,8 @@
                     </span>
                 </td>
                 <td class="text-center">
-                    <button class="btn btn-sm btn-outline-primary me-2" (click)="edit.emit(user)">Editar</button>
-                    <button class="btn btn-sm btn-outline-danger" (click)="delete.emit(user.id)">Eliminar</button>
+                    <button class="btn btn-sm btn-outline-primary me-2" (click)="onEdit(user)">Editar</button>
+                    <button class="btn btn-sm btn-outline-danger" (click)="onDelete(user.id)">Eliminar</button>
                 </td>
             </tr>
         </tbody>

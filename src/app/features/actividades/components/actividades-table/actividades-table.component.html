@@ -30,12 +30,12 @@
 
                 <td class="text-center">
                     <button class="btn btn-sm btn-outline-primary me-2"
-                            (click)="edit.emit(actividad)">
+                            (click)="onEdit(actividad)">
                         Editar
                     </button>
 
                     <button class="btn btn-sm btn-outline-danger"
-                            (click)="delete.emit(actividad.idEvento)">
+                            (click)="onDelete(actividad.idEvento)">
                         Eliminar
                     </button>
                 </td>

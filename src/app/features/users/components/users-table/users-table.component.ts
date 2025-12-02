@@ -14,6 +14,12 @@ export class UsersTableComponent {
     @Output() edit = new EventEmitter<User>(); //el event emitter como su nombre lo dice emite cuando se quiere editar un usuario
     @Output() delete = new EventEmitter<number>(); //este emite el id cuando quieren borrar
    
+    onEdit(item: User){
+           this.edit.emit(item)
+       }
+       onDelete(id: number) {
+           this.delete.emit(id);
+       }
     getRoleBadge(rol: string): string {
   switch (rol) {
     case 'Admin':    return 'bg-danger';

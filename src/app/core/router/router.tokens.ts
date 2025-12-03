@@ -10,7 +10,8 @@ export const ROUTE_PREFIXES = new InjectionToken('ROUTE_PREFIXES',{
         TIPOS_SUSCRIPCION: '/tipos-suscripcion',
         SUSCRIPCIONES: '/suscripciones',
         ACTIVIDADES: '/actividades',
-        INVENTARIO: '/inventario'
+        INVENTARIO: '/inventario',
+        LANDING: '/landing'
     })
 });
 

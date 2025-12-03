@@ -1,0 +1,44 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+body, html {
+  height: 100%;
+}
+.parallax {
+  /* The image used */
+  background-image:url(/src/app/assets/hombreymujertrabajandoenelgimnasioconmascarasmedicas.jpg);
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainindex{
+  background-color: #ebebeb;
+  width: 100%;
+}
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(/src/app/assets/descargar.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 2rem;
+    border-radius: 20px;
+}
+.intro{
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+    opacity: 0.9;
+}

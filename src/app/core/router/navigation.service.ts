@@ -12,6 +12,9 @@ export class NavigationService {
         this.router.navigate(["/auth/login"]);
 
     }
+    goToHomePage(){
+      this.router.navigate(["/landing/home-page"])
+    }
 
     goToDashboard() {
         this.router.navigate(["/dashboard"]);

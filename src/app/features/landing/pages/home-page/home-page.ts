@@ -9,5 +9,7 @@ import { Navbar } from "../../../../shared/components/navbar/navbar";
   styleUrl: './home-page.css',
 })
 export class HomePage {
-
+  image = {
+    url: '/src/app/assets/hombreymujertrabajandoenelgimnasioconmascarasmedicas.jpg'
+  }
 }

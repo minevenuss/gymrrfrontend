@@ -6,6 +6,7 @@ export interface Suscripcion {
     fechaInicio: Date;
     fechaFin: Date;
     estadoPago: "Pagado" | "NoPagado";
+    NombreUsuario?: string;
     idTipoSuscripcion: number;
     tipoSuscripcion?: TipoSuscripcion;
     idUsuario: number;

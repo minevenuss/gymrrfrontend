@@ -1,6 +1,9 @@
 .auth-layout {
     min-height: 100vh;
-    background: linear-gradient(135deg, #29335C 0%, #1a1f3d 100% );
+    /*background: linear-gradient(135deg, #29335C 0%, #1a1f3d 100% );*/
+    background-image: url('/assets/img/resumenborrosogimnasio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

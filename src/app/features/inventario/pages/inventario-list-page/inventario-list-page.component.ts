@@ -3,6 +3,7 @@ import { InventarioService } from "../../services/inventario.service";
 import { CommonModule } from "@angular/common";
 import { InventarioTableComponent } from "../../components/inventario-table/inventario-table.component";
 import { InventarioModalComponent } from "../../components/inventario-modal/inventario-modal.component";
+import { Footer } from "../../../../shared/components/footer/footer";
 @Component ({
     selector: 'app-inventario-list-page',
     standalone: true,
@@ -17,7 +18,7 @@ export class InventarioListPageComponent implements OnInit{
 
 
     ngOnInit(){
-        this.service.loadAll(); 
+        this.service.loadAll();
     }
 
     openCreateModal() {

@@ -16,7 +16,7 @@ export class LoginPageComponent {
     // private readonly fb = inject(FormBuilder);
     readonly auth = inject(AuthService);
 
-    onSubmit(credentials:{email:string;password:string}){
+    onSubmit(credentials:{Email:string; Password:string}){
         this.auth.login(credentials);
     }
 }

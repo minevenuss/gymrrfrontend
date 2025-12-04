@@ -1,12 +1,12 @@
-<form (ngSubmit)="submitLogin.emit(form.getRawValue())" [class.loading]="loading">
+<form [formGroup]="form" (ngSubmit)="submitLogin.emit(form.getRawValue())" [class.loading]="loading">
 
     <div class="mb-3">
-        <input type="email" class="form-control form-control-lg" formControlName="email" placeholder="Email" required>
+        <input type="email" class="form-control form-control-lg" formControlName="Email" placeholder="Email" required>
 
     </div>
 
     <div class="mb-4">
-        <input type="password" class="form-control form-control-lg" formControlName="password" placeholder="Contraseña" required>
+        <input type="password" class="form-control form-control-lg" formControlName="Password" placeholder="Contraseña" required>
     </div>
     <button class="btn btn-primary btn-lg w-100" type="submit" [disabled]="loading">
   Iniciar Sesión

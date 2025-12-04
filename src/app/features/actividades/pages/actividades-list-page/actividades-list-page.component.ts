@@ -17,7 +17,9 @@ export class ActividadesListPageComponent implements OnInit{
 
 
     ngOnInit(){
-        this.service.loadAll(); //esto carga los usuarios al entrar a la pag
+        this.service.loadAll(); //esto carga las acitividades al entrar a la pag
+        setTimeout(() => {
+    }, 1000);
     }
 
     openCreateModal() {
@@ -30,13 +32,19 @@ export class ActividadesListPageComponent implements OnInit{
       this.showModal = true;
     }
 
-    onSave(data:any){
-      if(this.selectedActivity){
-        this.service.update(this.selectedActivity.id, data)
-      }else{
+    onSave(data: any) {
+   
+    if(this.selectedActivity) {
+        const id = this.selectedActivity.IdEvento;
+        
+        if(!id) {
+            return;
+        }
+        
+        this.service.update(id, data);
+    } else {
         this.service.create(data);
-      }
-
-      this.showModal = false;
     }
+    this.showModal = false;
+}
 }

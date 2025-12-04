@@ -1,6 +1,6 @@
 export const API_CONFIG = {
     BASE_URL: 'https://localhost:7158/api',
- 
+
 AUTH: {
     LOGIN: '/login',
     REGISTER: '/register-extended'
@@ -26,9 +26,9 @@ SUSCRICPIONES: {
     CREATE: '/Suscripcion/CrearSuscripcion',
     UPDATE: (id: number) => `/Suscripcion/ActualizarSuscripcion/${id}`,
     DELETE: (id: number) => `/Suscripcion/EliminarSuscripcionPorID/${id}`,
+    FILTER_BY_ESTADO_PAGO: (pagado: boolean) => `/Suscripcion/FiltrarPorEstadoPago?pagado=${pagado}`,
     MARCAR_PAGO: (id: number) => `/Suscripcion/MarcarPago/${id}`,
-    RENOVAR_SUSCRIPCION: (id: number) => `/Suscripcion/RenovarSuscripcion/${id}`,
-    FILTER_BY_ESTADO_PAGO: (pagado: boolean) => `/Suscripcion/FiltrarPorEstadoPago?pagado=${pagado}`
+    RENOVAR_SUSCRIPCION: (id: number) => `/Suscripcion/RenovarSuscripcion/${id}`
 },
 
 TIPOS_SUSCRICIPION: {

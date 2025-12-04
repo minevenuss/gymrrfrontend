@@ -1,5 +1,5 @@
 export interface CreateSuscripcionDto {
-  estado: string;
+  estado:  "Activa" | "Inactiva" | "Cancelada";
   fechaInicio: Date;
   fechaFin: Date;
   estadoPago: string;

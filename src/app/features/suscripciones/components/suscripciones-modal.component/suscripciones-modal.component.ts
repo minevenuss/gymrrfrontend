@@ -25,7 +25,7 @@ export class SuscripcionesModalComponent {
         FechaInicio:['', Validators.required],
         FechaFin: ['', Validators.required],
         EstadoPago: ['', Validators.required],
-        UserID: ['', Validators.required],
+        UserID: [''],
         IdTipoSuscripcion: ['', Validators.required]
     });
 

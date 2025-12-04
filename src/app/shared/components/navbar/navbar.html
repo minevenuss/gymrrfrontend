@@ -16,21 +16,22 @@
         <li class="nav-item">
           <a class="nav-link" href="landing/contact">Contacto</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+        <li *ngIf="auth.isLoggedIn()" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Acciones del sistema</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="suscripciones">Suscripciones</a></li>
             <li><a class="dropdown-item" href="actividades">Actividades</a></li>
-            <li><a class="dropdown-item" href="#">A third link</a></li>
+            <li><a class="dropdown-item" href="inventario">Inventario</a></li>
+            <li><a class="dropdown-item" href="users">Usuarios</a></li>
+            <li><a class="dropdown-item" href="cargos">Cargos</a></li>
+            <li><a class="dropdown-item" href="tiposuscripciones">Tipo Suscripciones</a></li>
           </ul>
         </li>
       </ul>
       <div class="d-flex">
-        <a class="btn btn-secondary" href="auth/login">Iniciar sesion</a>
-        <div>
-          <br>
-        </div>
-        <a class="btn btn-success" href="auth/register">Registrarse</a>
+        <a *ngIf="!auth.isLoggedIn()" class="btn btn-secondary" href="auth/login">Iniciar sesion</a>
+        <a *ngIf="!auth.isLoggedIn()" class="btn btn-success" href="auth/register">Registrarse</a>
+        <a *ngIf="auth.isLoggedIn()" (click)="auth.logout()" class="btn btn-danger" href="" >Cerrar Sesion</a>
       </div>
     </div>
   </div>

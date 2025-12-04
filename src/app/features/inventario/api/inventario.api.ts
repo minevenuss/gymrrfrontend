@@ -27,7 +27,7 @@ export class InventarioApi{
     }
 
     update(id:number, data: Partial<CreateInventarioDto>){
-        return this.http.patch<ApiResponse<Inventario>>(this.base + API_CONFIG.INVENTARIO.UPDATE(id), data)
+        return this.http.put<ApiResponse<Inventario>>(this.base + API_CONFIG.INVENTARIO.UPDATE(id), data)
     }
 
     delete(id:number){

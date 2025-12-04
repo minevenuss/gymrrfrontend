@@ -21,20 +21,24 @@ export class InventarioModalComponent {
     private fb = inject(FormBuilder);
 
     form = this.fb.group({
-        nombre: ['', Validators.required],
-        categoria: ['', Validators.required],
-        cantidad: [1, [Validators.required, Validators.min(1)]],
-        estado: ['Nuevo', Validators.required],
-        descripcion: [''],
-        fechaRegistro: [null],
-        fechaActualizacion: [null],
+        Nombre: ['', Validators.required],
+        Categoria: ['', Validators.required],
+        Cantidad: [1, [Validators.required, Validators.min(1)]],
+        Estado: ['Nuevo', Validators.required],
+        Descripcion: ['']
     });
 
     ngOnChanges() {
-        if (this.inventario && this.isEdit) {
-        this.form.patchValue(this.inventario);
-        }
+    if (this.inventario && this.isEdit) {
+      this.form.patchValue({
+        Nombre: this.inventario.Nombre || this.inventario.nombre || '',
+        Categoria: this.inventario.Categoria || this.inventario.categoria || '',
+        Cantidad: this.inventario.Cantidad || this.inventario.cantidad || 1,
+        Estado: this.inventario.Estado || this.inventario.estado || 'Nuevo',
+        Descripcion: this.inventario.Descripcion || this.inventario.descripcion || ''
+      });
     }
+  }
 
     onSubmit() {
         if (this.form.valid) {

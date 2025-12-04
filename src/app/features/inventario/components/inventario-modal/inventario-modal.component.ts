@@ -39,7 +39,10 @@ export class InventarioModalComponent {
       });
     }
   }
-
+    isInvalid(control: string) {
+            const c = this.form.get(control);
+            return c?.invalid && (c?.dirty || c?.touched);
+            }
     onSubmit() {
         if (this.form.valid) {
         this.save.emit(this.form.getRawValue());

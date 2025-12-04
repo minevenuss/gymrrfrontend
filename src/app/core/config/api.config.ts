@@ -32,11 +32,11 @@ SUSCRICPIONES: {
 },
 
 TIPOS_SUSCRICIPION: {
-    GET_ALL: 'TipoSuscripcion/ObtenerTiposSuscripciones',
-    GET_BY_ID: (id: number) => `TipoSuscripcion/ObtenerTipoSuscripcion/${id}`,
-    CREATE: 'TipoSuscripcion/CrearTipoSuscripcion',
-    UPDATE: (id: number) => `TipoSuscripcion/ActualizarTipoSuscripcion/${id}`,
-    DELETE: (id: number) => `TipoSuscripcion/EliminarTipoSuscripcion/${id}`
+    GET_ALL: '/TipoSuscripcion/ObtenerTiposSuscripciones',
+    GET_BY_ID: (id: number) => `/TipoSuscripcion/ObtenerTipoSuscripcion/${id}`,
+    CREATE: '/TipoSuscripcion/CrearTipoSuscripcion',
+    UPDATE: (id: number) => `/TipoSuscripcion/ActualizarTipoSuscripcion/${id}`,
+    DELETE: (id: number) => `/TipoSuscripcion/EliminarTipoSuscripcion/${id}`
 },
 
 ACTIVIDADES: {

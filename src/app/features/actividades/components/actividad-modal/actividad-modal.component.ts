@@ -40,7 +40,10 @@ export class ActividadModalComponent {
             
         }
     }
-
+        isInvalid(control: string) {
+        const c = this.form.get(control);
+        return c?.invalid && (c?.dirty || c?.touched);
+        }
     onSubmit() {
         console.log('Form válido?', this.form.valid);
     console.log('Form value:', this.form.getRawValue());

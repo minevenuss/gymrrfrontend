@@ -129,11 +129,32 @@ export class AuthService {
                 title: '¡Registro exitoso!',
                 text: 'Ya puedes iniciar sesión',
                 confirmButtonColor: '#29335C'
-            });
+            }).then(() =>{
+                 this.routes.navigate(['/auth/login']);
+            })
+
             this.isLoading.set(false);
         },
         error: (err) => {
             console.error('Error completo:', err);
+            const errorMsg = JSON.stringify(err.error || '').toLowerCase();
+    if (errorMsg.includes('password') || errorMsg.includes('contraseña')) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Contraseña inválida',
+            html: `
+                La contraseña debe cumplir con los siguientes requisitos:<br>
+                • Al menos 6 caracteres<br>
+                • Al menos 1 mayúscula<br>
+                • Al menos 1 número<br>
+                • Al menos 1 símbolo<br>
+                • Ser alfanumérica
+            `,
+            confirmButtonColor: '#DB2B39'
+        });
+        this.isLoading.set(false);
+        return;
+    }
 
            let erroresTexto = 'Error desconocido';
 

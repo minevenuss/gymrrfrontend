@@ -1,7 +1,7 @@
 export interface TipoSuscripcion{
-    idTipoSuscricpcion: number;
-    nombre: string;
-    descripcion?: string;
-    precio: number;
-    duracion: string;
+    IdTipoSuscricpcion: number;
+    NombreTipSus: string;
+    Descripcion?: string;
+    Precio: number;
+    Duracion: string;
 }

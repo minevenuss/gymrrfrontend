@@ -1,0 +1,39 @@
+<div class="table-responsive">
+    <table class="table table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Duración</th>
+                <th>Descripción</th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody class="text-black">
+            <tr *ngFor="let item of suscripciones">
+
+                <td>{{ item.NombreTipSus }}</td>
+
+                <td>{{ item.Precio | currency:'RD':true }}</td>
+
+                <td>{{ item.Duracion }}</td>
+
+                <td>{{ item.Descripcion || '—' }}</td>
+
+                <td class="text-center">
+                    <button class="btn btn-sm btn-outline-primary me-2"
+                            (click)="onEdit(item)">
+                        Editar
+                    </button>
+
+                    <button class="btn btn-sm btn-outline-danger"
+                            (click)="onDelete(item.IdTipoSuscricpcion)">
+                        Eliminar
+                    </button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

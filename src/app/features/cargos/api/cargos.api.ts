@@ -26,7 +26,7 @@ export class CargosApi{
   }
 
   update(id: number, data: Partial<CreateCargoDto>){
-    return this.http.patch<ApiResponse<Cargo>>(this.base + API_CONFIG.CARGOS.UPDATE(id), data);
+    return this.http.put<ApiResponse<Cargo>>(this.base + API_CONFIG.CARGOS.UPDATE(id), data);
   }
 
   delete(id: number){

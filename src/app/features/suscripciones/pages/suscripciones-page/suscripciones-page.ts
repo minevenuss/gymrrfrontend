@@ -3,6 +3,7 @@ import { SuscripcionesTableComponent } from "../../components/suscripciones-tabl
 import { SuscripcionesService } from '../../services/suscripciones.service';
 import { SuscripcionesModalComponent } from '../../components/suscripciones-modal.component/suscripciones-modal.component';
 import { CommonModule } from '@angular/common';
+import { Suscripcion } from '../../../../core/interfaces/suscripcion.interface';
 
 @Component({
   selector: 'app-suscripciones-page',
@@ -28,8 +29,8 @@ export class SuscripcionesPage {
       this.showModal=true;
     }
 
-    openEditModal(actividad:any){
-      this.selectedActivity = actividad;
+    openEditModal(Suscripcion:any){
+      this.selectedActivity = Suscripcion;
       this.showModal = true;
     }
 

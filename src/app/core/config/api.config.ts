@@ -13,11 +13,11 @@ USERS: {
 },
 
 CARGOS: {
-    GET_ALL: '/Cargo/ObtenerCargos/',
-    GET_BY_ID: (id: number) => `/Cargo/ObtenerCargoPorID/${id}`,
-    CREATE: '/CrearCargo',
-    UPDATE: (id: number) => `/Cargo/ActualizarCargo/${id}`,
-    DELETE: (id: number) => `/Cargo/EliminarCargoPorID/${id}`
+    GET_ALL: '/Cargos/ObtenerCargos/',
+    GET_BY_ID: (id: number) => `/Cargos/ObtenerCargoPorID/${id}`,
+    CREATE: '/Cargos/CrearCargo',
+    UPDATE: (id: number) => `/Cargos/ActualizarCargo/${id}`,
+    DELETE: (id: number) => `/Cargos/EliminarCargoPorID/${id}`
 },
 
 SUSCRICPIONES: {

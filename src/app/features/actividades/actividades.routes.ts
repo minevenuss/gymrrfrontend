@@ -8,7 +8,7 @@ export const ACTIVIDADES_ROUTES: Routes = [
     {
         path:'',
         loadComponent: () => import('./pages/actividades-list-page/actividades-list-page.component').then(m=> m.ActividadesListPageComponent),
-        canActivate: [roleGuard(['Admin', 'Empleado'])],
+        //canActivate: [roleGuard(['Admin', 'Empleado'])],
         title: 'Actividades - GymRR'
     }
 ];

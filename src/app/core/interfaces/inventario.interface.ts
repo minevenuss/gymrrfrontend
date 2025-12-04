@@ -1,10 +1,10 @@
 export interface Inventario {
     IdInventario: number;
-    nombre: string;
-    categoria: string;
-    cantidad: number;
-    estado: 'Nuevo' | 'Usado';
-    fechaRegistro?: Date;
-    fechaActualizacion?: Date;
-    descripcion?: string;
+    Nombre: string;
+    Categoria: string;
+    Cantidad: number;
+    Estado: 'Nuevo' | 'Usado';
+    FechaRegistro?: Date;
+    FechaActualizacion?: Date;
+    Descripcion?: string;
 }

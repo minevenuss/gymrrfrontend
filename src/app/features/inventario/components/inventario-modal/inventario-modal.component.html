@@ -15,14 +15,14 @@
                     <div class="mb-3">
                         <input 
                             class="form-control"
-                            formControlName="nombre"
+                            formControlName="Nombre"
                             placeholder="Nombre del artículo">
                     </div>
 
                     <div class="mb-3">
                         <input 
                             class="form-control"
-                            formControlName="categoria"
+                            formControlName="Categoria"
                             placeholder="Categoría">
                     </div>
 
@@ -31,13 +31,13 @@
                         <input 
                             type="number"
                             class="form-control"
-                            formControlName="cantidad"
+                            formControlName="Cantidad"
                             placeholder="Cantidad">
                     </div>
 
                     <div class="mb-3">
                         <label class="mb-1">Estado</label>
-                        <select class="form-select" formControlName="estado">
+                        <select class="form-select" formControlName="Estado">
                             <option value="Nuevo">Nuevo</option>
                             <option value="Usado">Usado</option>
                         </select>
@@ -46,23 +46,19 @@
                     <div class="mb-3">
                         <textarea 
                             class="form-control"
-                            formControlName="descripcion"
+                            formControlName="Descripcion"
                             placeholder="Descripción (opcional)"
                             rows="3">
                         </textarea>
                     </div>
-                    <div class="row" *ngIf="isEdit">
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Fecha de Registro</label>
-                            <input type="date" class="form-control" formControlName="fechaRegistro">
+                    <!-- <div class="row text-muted small border-top pt-3" *ngIf="isEdit && inventario">
+                        <div class="col-md-6">
+                        <strong>Registrado:</strong> {{ inventario.fechaRegistro | date:'short' }}
                         </div>
-
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Última Actualización</label>
-                            <input type="date" class="form-control" formControlName="fechaActualizacion">
+                        <div class="col-md-6">
+                        <strong>Última actualización:</strong> {{ inventario.fechaActualizacion | date:'short' }}
                         </div>
-                    </div>
-
+                    </div> -->
                     <div class="d-flex justify-content-end gap-2 mt-3">
                         <button type="button" class="btn btn-secondary" (click)="close.emit()">
                             Cancelar

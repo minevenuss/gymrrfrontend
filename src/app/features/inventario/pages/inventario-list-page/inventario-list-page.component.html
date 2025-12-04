@@ -23,7 +23,8 @@
 
         <app-inventario-modal
             *ngIf="showModal"
-            [isEdit]="!!selectedInventario"
+            [inventario]="selectedInventario"
+            [isEdit]="selectedInventario != null"
             (save)="onSave($event)"
             (close)="showModal = false">
         </app-inventario-modal>

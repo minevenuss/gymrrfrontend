@@ -33,7 +33,7 @@ export class InventarioListPageComponent implements OnInit{
 
     onSave(data:any){
       if(this.selectedInventario){
-        this.service.update(this.selectedInventario.id, data)
+        this.service.update(this.selectedInventario.IdInventario, data)
       }else{
         this.service.create(data);
       }

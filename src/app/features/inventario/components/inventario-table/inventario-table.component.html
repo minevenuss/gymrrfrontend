@@ -7,23 +7,27 @@
                 <th>Cantidad</th>
                 <th>Descripción</th>
                 <th>Estado</th>
+                <th>Fecha Registro</th>
+                <th>Fecha Actualizacion</th>
                 <th class="text-center">Acciones</th>
             </tr>
         </thead>
 
         <tbody>
             <tr *ngFor="let item of inventarios">
-                <td>{{ item.nombre }}</td>
-                <td>{{ item.categoria }}</td>
-                <td>{{ item.cantidad }}</td>
-                <td>{{item.descripcion}}</td>
+                <td>{{ item.Nombre }}</td>
+                <td>{{ item.Categoria }}</td>
+                <td>{{ item.Cantidad }}</td>
+                <td>{{item.Descripcion}}</td>
 
                 <td>
-                    <span class="badge" [class]="getEstadoBadge(item.estado)">
-                        {{ item.estado }}
+                    <span class="badge" [class]="getEstadoBadge(item.Estado)">
+                        {{ item.Estado }}
                     </span>
                 </td>
-
+                <td>{{ item.FechaRegistro | date:'dd/MM/yy' }}</td>
+                <td>{{ item.FechaActualizacion | date:'dd/MM/yy' }}</td>
+                <td class="text-center">
                 <button class="btn btn-sm btn-outline-primary me-2" (click)="onEdit(item)">
                     Editar
                 </button>
@@ -31,6 +35,7 @@
                 <button class="btn btn-sm btn-outline-danger" (click)="onDelete(item.IdInventario)">
                     Eliminar
                 </button>
+                </td>
             </tr>
         </tbody>
     </table>

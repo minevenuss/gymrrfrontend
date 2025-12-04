@@ -1,5 +1,5 @@
 export interface Inventario {
-    idInventario: number;
+    IdInventario: number;
     nombre: string;
     categoria: string;
     cantidad: number;

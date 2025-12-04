@@ -20,11 +20,6 @@ export class UsersListPageComponent implements OnInit{
         this.service.loadAll(); //esto carga los usuarios al entrar a la pag
     }
 
-    openCreateModal() {
-      this.selectedUser=null;
-      this.showModal=true;
-    }
-
     openEditModal(user:any){
       this.selectedUser = user;
       this.showModal = true;
@@ -33,10 +28,7 @@ export class UsersListPageComponent implements OnInit{
     onSave(data:any){
       if(this.selectedUser){
         this.service.update(this.selectedUser.id, data)
-      }else{
-        this.service.create(data);
       }
-
       this.showModal = false;
     }
 }

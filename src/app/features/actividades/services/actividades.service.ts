@@ -12,20 +12,24 @@ export class ActividadesService{
     private actividades = signal<Actividades[]>([]);
     private loading = signal(false);
 
-    readonly actividades$ = this.actividades.asReadonly();
+    readonly actividades$ = computed(() => this.actividades());
     readonly loading$ = this.loading.asReadonly();
 
     //carga todas las actividades
     loadAll() {
-        this.loading.set(true);
-        this.api.getAll().subscribe({
-            next: (res) => {
-                if (res.success) this.actividades.set(res.data ?? []);
-                this.loading.set(false);
-            },
-            error: () => this.loading.set(false)
-        });
-    }
+    this.loading.set(true);
+    this.api.getAll().subscribe({
+        next: (res) => {
+            const data = (res as any).data ?? res;
+            this.actividades.set(data);
+            this.loading.set(false);
+        },
+        error: (err) => {
+            this.loading.set(false);
+            
+        }
+    });
+}
     
     //crea actividades
     create(actividad: CreateActividadDto) {

@@ -1,9 +1,9 @@
 export interface CreateActividadDto {
-    nombre: string;
-    descripcion: string;
-    fecha?: Date;
-    horaInicio?: string;
-    horaFin?: string;
-    cupoMaximo: number;
-    estado: 'Pendiente' | 'Cancelada' | 'Activa';
+    Nombre: string;
+    Descripcion: string;
+    Fecha?: Date;
+    HoraInicio?: string;
+    HoraFin?: string;
+    CupoMaximo: number;
+    Estado: 'Pendiente' | 'Cancelada' | 'Activa';
 }

@@ -10,21 +10,21 @@
                 <th class="text-center">Acciones</th>
             </tr>
         </thead>
-        <tbody>
-            <tr *ngFor="let actividad of actividad">
-                <td>{{ actividad.nombre }}</td>
+        <tbody class="text-black">
+            <tr *ngFor="let actividad of actividades">
+                <td>{{ actividad.Nombre }}</td>
 
-                <td>{{ actividad.fecha | date: 'yyyy-MM-dd' }}</td>
+                <td>{{ actividad.Fecha | date: 'yyyy-MM-dd' }}</td>
 
                 <td>
-                    {{ actividad.horaInicio }} - {{ actividad.horaFin }}
+                    {{ actividad.HoraInicio }} - {{ actividad.HoraFin }}
                 </td>
 
-                <td>{{ actividad.cupoMaximo }}</td>
+                <td>{{ actividad.CupoMaximo }}</td>
 
                 <td>
-                    <span class="badge" [class]="getEstadoBadge(actividad.estado)">
-                        {{ actividad.estado }}
+                    <span class="badge" [class]="getEstadoBadge(actividad.Estado)">
+                        {{ actividad.Estado }}
                     </span>
                 </td>
 
@@ -35,7 +35,7 @@
                     </button>
 
                     <button class="btn btn-sm btn-outline-danger"
-                            (click)="onDelete(actividad.idEvento)">
+                            (click)="onDelete(actividad.IdEvento)">
                         Eliminar
                     </button>
                 </td>

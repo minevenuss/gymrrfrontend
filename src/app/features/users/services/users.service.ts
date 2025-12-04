@@ -27,22 +27,22 @@ export class UsersService{
         });
     }
     
-    //crea usuarios
-    create(user: CreateUserDto) {
-        this.api.create(user).subscribe({
-            next: (res) => res.success && this.loadAll()
-        });
-    }
+    // //crea usuarios
+    // create(user: CreateUserDto) {
+    //     this.api.create(user).subscribe({
+    //         next: (res) => res.success && this.loadAll()
+    //     });
+    // }
     
     //actualiza usuario
-    update(id: number, data: Partial<CreateUserDto>){
+    update(id: string, data: Partial<CreateUserDto>){
         this.api.update(id, data).subscribe({
             next: (res) => res.success && this.loadAll()
         });
     }
 
     //elimina usuario
-    delete(id: number){
+    delete(id: string){
         this.api.delete(id).subscribe({
             next: (res) => res.success && this.loadAll()
         })

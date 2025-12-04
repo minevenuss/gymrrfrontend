@@ -41,7 +41,7 @@ export class SuscripcionesApi{
     this.http.post<ApiResponse<Suscripcion>>(this.base + API_CONFIG.SUSCRICPIONES.RENOVAR_SUSCRIPCION(id), newEndDate)
   }
 
-  filterByEstadoPago(estado: string){
-    this.http.get<ApiResponse<Suscripcion>>(this.base + API_CONFIG.SUSCRICPIONES.FILTER_BY_ESTADO_PAGO(estado))
+  filterByEstadoPago(pagado: boolean){
+    this.http.get<ApiResponse<Suscripcion[]>>(this.base + API_CONFIG.SUSCRICPIONES.FILTER_BY_ESTADO_PAGO(pagado))
   }
 }

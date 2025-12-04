@@ -14,18 +14,18 @@ export class RegisterFormComponent{
 
     @Input() loading = false;
     @Output() submitRegister = new EventEmitter<{
+        Email:string;
+        Password:string;
         primerNombre:string;
         primerApellido:string;
-        email:string;
-        password:string;
-        userName: string;
+        
     }>();
 
     readonly form = this.fb.nonNullable.group({
+        Email: ['', [Validators.required, Validators.email]],
+        Password: ['', [Validators.required, Validators.minLength(6)]],
         primerNombre: ['', Validators.required],
-        primerApellido: ['', Validators.required],
-        userName: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(6)]]
+        primerApellido: ['', Validators.required]
+        
     })
 }

@@ -1,61 +1,59 @@
 export const API_CONFIG = {
-    BASE_URL: 'https://localhost:3000/api',
+    BASE_URL: 'https://localhost:7158/api',
  
 AUTH: {
-    LOGIN: '/auth/login',
-    REGISTER: '/auth/register'
+    LOGIN: '/login',
+    REGISTER: '/register-extended'
 },
 USERS: {
-    GET_ALL: '/users',
-    GET_BY_ID: (id: number) => `/users/${id}`,
-    CREATE: '/users',
-    UPDATE: (id: number) => `/users/${id}`,
-    DELETE: (id: number) => `/users/${id}`
+    GET_ALL: '/Cuenta/ObtenerCuentas',
+    GET_BY_ID: (id: string) => `/Cuenta/ObtenerPorId/${id}`,
+    UPDATE: (id: string) => `/Cuenta/ActualizarCUenta/${id}`,
+    DELETE: (id: string) => `/Cuenta/EliminarCuenta/${id}`
 },
 
 CARGOS: {
-    GET_ALL: '/cargos',
-    GET_BY_ID: (id: number) => `/cargos/${id}`,
-    CREATE: '/cargos',
-    UPDATE: (id: number) => `/cargos/${id}`,
-    DELETE: (id: number) => `/cargos/${id}`
+    GET_ALL: '/Cargo/ObtenerCargos/',
+    GET_BY_ID: (id: number) => `/Cargo/ObtenerCargoPorID/${id}`,
+    CREATE: '/CrearCargo',
+    UPDATE: (id: number) => `/Cargo/ActualizarCargo/${id}`,
+    DELETE: (id: number) => `/Cargo/EliminarCargoPorID/${id}`
 },
 
 SUSCRICPIONES: {
-    GET_ALL: '/suscripciones',
-    GET_BY_ID: (id: number) => `/suscripciones/${id}`,
-    CREATE: '/suscripciones',
-    UPDATE: (id: number) => `/suscripciones/${id}`,
-    DELETE: (id: number) => `/suscripciones/${id}`,
-    MARCAR_PAGO: (id: number) => `/suscripciones/${id}/marcar-pago`,
-    RENOVAR_SUSCRIPCION: (id: number) => `/suscripciones/${id}/renovar`,
-    FILTER_BY_ESTADO_PAGO: (estado: string) => `/suscripciones?estadoPago=${estado}`
-
+    GET_ALL: '/Suscripcion/ObtenerSuscripciones',
+    GET_BY_ID: (id: number) => `/Suscripcion/ObtenerSuscripcionPorID/${id}`,
+    CREATE: '/Suscripcion/CrearSuscripcion',
+    UPDATE: (id: number) => `/Suscripcion/ActualizarSuscripcion/${id}`,
+    DELETE: (id: number) => `/Suscripcion/EliminarSuscripcionPorID/${id}`,
+    MARCAR_PAGO: (id: number) => `/Suscripcion/MarcarPago/${id}`,
+    RENOVAR_SUSCRIPCION: (id: number) => `/Suscripcion/RenovarSuscripcion/${id}`,
+    FILTER_BY_ESTADO_PAGO: (pagado: boolean) => `/Suscripcion/FiltrarPorEstadoPago?pagado=${pagado}`
 },
 
 TIPOS_SUSCRICIPION: {
-    GET_ALL: '/tipos-suscripcion',
-    GET_BY_ID: (id: number) => `/tipos-suscripcion/${id}`,
-    CREATE: '/tipos-suscripcion',
-    UPDATE: (id: number) => `/tipos-suscripcion/${id}`,
-    DELETE: (id: number) => `/tipos-suscripcion/${id}`
+    GET_ALL: 'TipoSuscripcion/ObtenerTiposSuscripciones',
+    GET_BY_ID: (id: number) => `TipoSuscripcion/ObtenerTipoSuscripcion/${id}`,
+    CREATE: 'TipoSuscripcion/CrearTipoSuscripcion',
+    UPDATE: (id: number) => `TipoSuscripcion/ActualizarTipoSuscripcion/${id}`,
+    DELETE: (id: number) => `TipoSuscripcion/EliminarTipoSuscripcion/${id}`
 },
 
 ACTIVIDADES: {
-    GET_ALL: '/actividades',
-    GET_BY_ID: (id:number) => `/actividades/${id}`,
-    CREATE: '/actividades',
-    UPDATE: (id: number) => `/actividades/${id}`,
-    DELETE: (id: number) => `/actividades/${id}`
+    GET_ALL: '/Actividades/ObtenerActividades',
+    GET_BY_ID: (id:number) => `/Actividades/ObtenerActividadPorID/${id}`,
+    CREATE: '/Actividades/CrearActividad',
+    UPDATE: (id: number) => `/Actividades/ActualizarActividad/${id}`,
+    DELETE: (id: number) => `/Actividades/EliminarActividadPorID/${id}`
 
 },
 
 INVENTARIO: {
-    GET_ALL: '/inventario',
-    GET_BY_ID: (id:number) => `/inventarui/${id}`,
-    CREATE: '/actividades',
-    UPDATE: (id: number) => `/inventario/${id}`,
-    DELETE: (id: number) => `/inventario/${id}`
+    GET_ALL: '/Inventario/ObtenerInventario/',
+    GET_BY_ID: (id:number) => `/Inventario/ObtenerInventarioPorID/${id}`,
+    CREATE: '/Inventario/CrearInventario',
+    UPDATE: (id: number) => `/Inventario/ActualizarInventario/${id}`,
+    DELETE: (id: number) => `/Inventario/EliminarInventarioPorID/${id}`
 
 }
 

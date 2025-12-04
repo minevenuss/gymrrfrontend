@@ -9,7 +9,7 @@
             <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
                 <div class="card-body p-0">
                      <app-actividades-table 
-                        [actividad]="service.actividades$()"
+                        [actividades]="service.actividades$()"
                         (edit) = "openEditModal($event)"
                         (delete) = "service.delete($event)"
                         > </app-actividades-table>

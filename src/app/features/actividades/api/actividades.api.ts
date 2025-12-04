@@ -30,7 +30,7 @@ export class ActividadesApi{
 
     //actualizar una actividad existente
     update(id:number, data: Partial<CreateActividadDto>){
-        return this.http.patch<ApiResponse<Actividades>>(this.base + API_CONFIG.ACTIVIDADES.UPDATE(id), data)
+        return this.http.put<ApiResponse<Actividades>>(this.base + API_CONFIG.ACTIVIDADES.UPDATE(id), data)
     }
 
     //eliminar una actividad

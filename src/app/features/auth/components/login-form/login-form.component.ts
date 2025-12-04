@@ -12,10 +12,10 @@ import { CommonModule } from '@angular/common';
 export class LoginFormComponent {
     private readonly fb = inject(FormBuilder)
     @Input() loading = false;
-    @Output() submitLogin = new EventEmitter<{email:string; password:string;}>();
+    @Output() submitLogin = new EventEmitter<{Email:string; Password:string;}>();
 
     readonly form = this.fb.nonNullable.group({
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(6)]]
+        Email: ['', [Validators.required, Validators.email]],
+        Password: ['', [Validators.required, Validators.minLength(6)]]
     });
 }

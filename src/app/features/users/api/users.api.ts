@@ -20,22 +20,22 @@ export class UsersApi{
     }
 
     //obtener usuarios por su id
-    getById(id: number){
-        return this.http.get<ApiResponse<User>>(this.base + API_CONFIG.USERS.GET_BY_ID);
+    getById(id: string){
+        return this.http.get<ApiResponse<User>>(`${this.base}${API_CONFIG.USERS.GET_BY_ID(id)}`);
     }
 
-    //crear un nuevo usuario
-    create(data: CreateUserDto){
-        return this.http.post<ApiResponse<User>>(this.base + API_CONFIG.USERS.CREATE, data);
-    }
+    // //crear un nuevo usuario
+    // create(data: CreateUserDto){
+    //     return this.http.post<ApiResponse<User>>(this.base + API_CONFIG.USERS.CREATE, data);
+    // }
 
     //actualizar un usuario existente
-    update(id:number, data: Partial<CreateUserDto>){
-        return this.http.patch<ApiResponse<User>>(this.base + API_CONFIG.USERS.UPDATE(id), data)
+    update(id:string, data: Partial<CreateUserDto>){
+        return this.http.put<ApiResponse<User>>(this.base + API_CONFIG.USERS.UPDATE(id), data)
     }
 
     //eliminar un usuario
-    delete(id:number){
+    delete(id:string){
         return this.http.delete<ApiResponse<null>>(this.base + API_CONFIG.USERS.DELETE(id));
     }
 }

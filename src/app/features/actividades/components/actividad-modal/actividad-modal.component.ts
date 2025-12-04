@@ -21,13 +21,13 @@ export class ActividadModalComponent {
     private fb = inject(FormBuilder);
 
     form = this.fb.group({
-        nombre: ['', Validators.required],
-        descripcion:['', Validators.required],
-        fecha: ['', Validators.required],
-        horaInicio: ['', Validators.required],
-        horaFin: ['', Validators.required],
-        cupoMaximo: [1, [Validators.required, Validators.min(1)]],
-        estado: ['Activa', Validators.required]
+        Nombre: ['', Validators.required],
+        Descripcion:['', Validators.required],
+        Fecha: ['', Validators.required],
+        HoraInicio: ['', Validators.required],
+        HoraFin: ['', Validators.required],
+        CupoMaximo: [1, [Validators.required, Validators.min(1)]],
+        Estado: ['Activa', Validators.required]
     });
 
     ngOnChanges() {
@@ -42,6 +42,8 @@ export class ActividadModalComponent {
     }
 
     onSubmit() {
+        console.log('Form válido?', this.form.valid);
+    console.log('Form value:', this.form.getRawValue());
         if(this.form.valid) {
             this.save.emit(this.form.getRawValue());
         }

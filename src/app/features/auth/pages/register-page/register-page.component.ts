@@ -12,7 +12,21 @@ import { RouterLink } from '@angular/router';
 export class RegisterPageComponent{
     readonly auth = inject(AuthService);
 
-    onSubmit(data: {primerNombre: string; primerApellido: string; email:string; password:string; userName: string;}){
-        this.auth.register(data);
+    onSubmit(data: any){
+        console.log('=== DATA RECIBIDA EN PAGE ===');
+        console.log('Data original:', data);
+        console.log('Tipo:', typeof data);
+        console.log('Keys:', Object.keys(data));
+
+         const cleanData = {
+            Email: data.Email,
+            Password: data.Password,
+            primerNombre: data.primerNombre,
+            primerApellido: data.primerApellido
+        };
+        
+        console.log('Data limpia:', cleanData);
+        
+        this.auth.register(cleanData);
     }
 }

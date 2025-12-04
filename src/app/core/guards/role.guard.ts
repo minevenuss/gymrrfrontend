@@ -13,8 +13,8 @@ export function roleGuard(allowedRoles: string[]): CanActivateFn {
             return false;
         }
 
-        if(!allowedRoles.includes(user.rol)) {
-            router.navigate(['/dashboard']);
+        if(!allowedRoles.includes(user.Rol)) {
+            router.navigate(['']);
             return false;
         }
         return true;

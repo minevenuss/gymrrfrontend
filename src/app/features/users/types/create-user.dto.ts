@@ -1,8 +1,8 @@
 export interface CreateUserDto {
-    userName: string;
-    email: string;
-    password: string;
+    UserName: string;
+    Email: string;
+    Password: string;
     primerNombre: string;
     primerApellido:string;
-    rol: 'Admin' | 'Empleado'| 'Cliente';
+    Rol: 'Admin' | 'Empleado'| 'Cliente';
 }

@@ -58,13 +58,13 @@ export class AuthService {
                         }
 
                       const user: User = {
-                            Id: 'usr-' + Date.now(),
-                            email: credentials.Email,
+                            UserId: 'usr-' + Date.now(),
+                            Email: credentials.Email,
                             primerNombre: primerNombre,
                             primerApellido: 'User',
-                            userName: userName, 
+                            UserName: userName, 
                             fechaCreacion: new Date(),
-                            rol: 'Cliente'
+                            Rol: 'Cliente'
                         };
                                                                     
                         this.tokenStorage.saveUser(user);

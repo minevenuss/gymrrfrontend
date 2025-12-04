@@ -16,16 +16,17 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" formControlName="userName" placeholder="Usuario">
+                        <input class="form-control" formControlName="UserName" placeholder="Usuario">
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" type="email" formControlName="email" placeholder="Email">
+                        <input class="form-control" type="email" formControlName="Email" placeholder="Email">
                     </div>
                     <div class="mb-3" *ngIf="!isEdit">
                         <input class="form-control" type="password" formControlName="password" placeholder="Contraseña">
                     </div>
                     <div class="mb-3">
-                        <select class="form-select" formControlName="rol">
+                        <label class="form-label fw-semibold">Rol</label>
+                        <select class="form-select" formControlName="Rol">
                         <option value="Cliente">Cliente</option>
                         <option value="Empleado">Empleado</option>
                         <option value="Admin">Admin</option>

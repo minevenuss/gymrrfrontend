@@ -18,17 +18,28 @@ export class UsersListPageComponent implements OnInit{
 
     ngOnInit(){
         this.service.loadAll(); //esto carga los usuarios al entrar a la pag
+        setTimeout(() => {
+    }, 1000);
     }
 
     openEditModal(user:any){
       this.selectedUser = user;
       this.showModal = true;
+
+      console.log('Usuario seleccionado para editar:', user);
+  console.log('ID del usuario:', user.Id, user.id, user.idUsuario);
     }
 
     onSave(data:any){
       if(this.selectedUser){
-        this.service.update(this.selectedUser.id, data)
+         console.log('Usuario completo:', this.selectedUser);
+        console.log('UserId:', this.selectedUser.UserId);     
+        this.service.update(this.selectedUser.UserId, data);
+
       }
-      this.showModal = false;
+      setTimeout(() => {
+        this.showModal = false;
+        this.selectedUser = null;
+    }, 500);
     }
 }

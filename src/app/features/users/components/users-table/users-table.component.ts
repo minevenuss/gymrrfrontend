@@ -20,8 +20,8 @@ export class UsersTableComponent {
        onDelete(id: string) {
            this.delete.emit(id);
        }
-    getRoleBadge(rol: string): string {
-  switch (rol) {
+    getRoleBadge(Rol: string): string {
+  switch (Rol) {
     case 'Admin':    return 'bg-danger';
     case 'Empleado': return 'bg-warning text-dark';
     case 'Cliente':  return 'bg-success';

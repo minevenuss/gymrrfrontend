@@ -1,9 +1,9 @@
 export interface User {
-    Id: string;
-    userName: string;
-    email: string;
+    UserId: string;
+    UserName: string;
+    Email: string;
     primerNombre: string;
     primerApellido: string;
     fechaCreacion: Date;
-    rol: "Admin" | "Empleado" | "Cliente";
+    Rol: "Admin" | "Empleado" | "Cliente";
 }

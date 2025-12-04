@@ -11,15 +11,15 @@
         <tbody>
             <tr *ngFor="let user of users">
                 <td>{{ user.primerNombre }} {{ user.primerApellido }}</td>
-                <td>{{ user.email }}</td>
+                <td>{{ user.Email }}</td>
                 <td>
-                    <span class="badge" [class]="getRoleBadge(user.rol)">
-                    {{ user.rol }}
+                    <span class="badge" [class]="getRoleBadge(user.Rol)">
+                    {{ user.Rol }}
                     </span>
                 </td>
                 <td class="text-center">
                     <button class="btn btn-sm btn-outline-primary me-2" (click)="onEdit(user)">Editar</button>
-                    <button class="btn btn-sm btn-outline-danger" (click)="onDelete(user.Id)">Eliminar</button>
+                    <button class="btn btn-sm btn-outline-danger" (click)="onDelete(user.UserId)">Eliminar</button>
                 </td>
             </tr>
         </tbody>

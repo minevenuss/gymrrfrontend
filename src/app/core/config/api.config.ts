@@ -1,6 +1,6 @@
 export const API_CONFIG = {
     BASE_URL: 'https://localhost:7158/api',
- 
+
 AUTH: {
     LOGIN: '/login',
     REGISTER: '/register-extended'
@@ -13,11 +13,11 @@ USERS: {
 },
 
 CARGOS: {
-    GET_ALL: '/Cargo/ObtenerCargos/',
-    GET_BY_ID: (id: number) => `/Cargo/ObtenerCargoPorID/${id}`,
-    CREATE: '/CrearCargo',
-    UPDATE: (id: number) => `/Cargo/ActualizarCargo/${id}`,
-    DELETE: (id: number) => `/Cargo/EliminarCargoPorID/${id}`
+    GET_ALL: '/Cargos/ObtenerCargos/',
+    GET_BY_ID: (id: number) => `/Cargos/ObtenerCargoPorID/${id}`,
+    CREATE: '/Cargos/CrearCargo',
+    UPDATE: (id: number) => `/Cargos/ActualizarCargo/${id}`,
+    DELETE: (id: number) => `/Cargos/EliminarCargoPorID/${id}`
 },
 
 SUSCRICPIONES: {
@@ -26,9 +26,9 @@ SUSCRICPIONES: {
     CREATE: '/Suscripcion/CrearSuscripcion',
     UPDATE: (id: number) => `/Suscripcion/ActualizarSuscripcion/${id}`,
     DELETE: (id: number) => `/Suscripcion/EliminarSuscripcionPorID/${id}`,
+    FILTER_BY_ESTADO_PAGO: (pagado: boolean) => `/Suscripcion/FiltrarPorEstadoPago?pagado=${pagado}`,
     MARCAR_PAGO: (id: number) => `/Suscripcion/MarcarPago/${id}`,
-    RENOVAR_SUSCRIPCION: (id: number) => `/Suscripcion/RenovarSuscripcion/${id}`,
-    FILTER_BY_ESTADO_PAGO: (pagado: boolean) => `/Suscripcion/FiltrarPorEstadoPago?pagado=${pagado}`
+    RENOVAR_SUSCRIPCION: (id: number) => `/Suscripcion/RenovarSuscripcion/${id}`
 },
 
 TIPOS_SUSCRICIPION: {

@@ -1,0 +1,30 @@
+<div class="table-responsive">
+    <table class="table table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nombre del Cargo</th>
+                <th>Descripción</th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="text-black">
+            <tr *ngFor="let cargo of Cargo">
+                <td>{{ cargo.idCargo }}</td>
+                <td>{{ cargo.nombre }}</td>
+                <td>{{ cargo.descripcion }}</td>
+                <td class="text-center">
+                    <button class="btn btn-sm btn-outline-primary me-2"
+                            (click)="onEdit(cargo)">
+                        Editar
+                    </button>
+
+                    <button class="btn btn-sm btn-outline-danger"
+                            (click)="onDelete(cargo.idCargo)">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

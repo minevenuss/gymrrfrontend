@@ -34,6 +34,11 @@ export const APP_ROUTES: Routes = [
       path: 'suscripciones',
       loadChildren: () =>
         import('../../features/suscripciones/suscripciones.routes').then(m=> m.SUSCRIPCIONES_ROUTES)
+  },
+    {
+      path: 'cargos',
+      loadChildren: () =>
+        import('../../features/cargos/cargo.routes').then(m=> m.CARGOS_ROUTES)
   }
 
 //    {

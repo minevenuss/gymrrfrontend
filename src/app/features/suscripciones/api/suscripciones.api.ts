@@ -26,22 +26,23 @@ export class SuscripcionesApi{
   }
 
   update(id: number, data: Partial<CreateSuscripcionDto>){
-    return this.http.patch<ApiResponse<Suscripcion>>(this.base + API_CONFIG.SUSCRICPIONES.UPDATE(id), data);
+    return this.http.put<ApiResponse<Suscripcion>>(this.base + API_CONFIG.SUSCRICPIONES.UPDATE(id), data);
   }
 
   delete(id: number){
     return this.http.delete<ApiResponse<Suscripcion>>(this.base + API_CONFIG.SUSCRICPIONES.DELETE(id));
   }
 
-  marcarPago(id: number){
-    return this.http.post<ApiResponse<Suscripcion>>(this.base + API_CONFIG.SUSCRICPIONES.MARCAR_PAGO, id);
-  }
-
-  renovarSuscripcion(id: number, newEndDate: Date){
-    return this.http.post<ApiResponse<Suscripcion>>(this.base + API_CONFIG.SUSCRICPIONES.RENOVAR_SUSCRIPCION(id), newEndDate)
-  }
-
   filterByEstadoPago(pagado: boolean){
     return this.http.get<ApiResponse<Suscripcion[]>>(this.base + API_CONFIG.SUSCRICPIONES.FILTER_BY_ESTADO_PAGO(pagado))
   }
+
+  marcarPago(id: number){
+    return this.http.put<ApiResponse<Suscripcion>>(this.base + API_CONFIG.SUSCRICPIONES.MARCAR_PAGO, id);
+  }
+
+  renovarSuscripcion(id: number, newEndDate: Date){
+    return this.http.put<ApiResponse<Suscripcion>>(this.base + API_CONFIG.SUSCRICPIONES.RENOVAR_SUSCRIPCION(id), newEndDate)
+  }
+
 }

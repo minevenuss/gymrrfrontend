@@ -29,6 +29,11 @@ export const APP_ROUTES: Routes = [
       path: 'inventario',
       loadChildren: () =>
         import('../../features/inventario/inventario.routes').then(m=> m.INVENTARIO_ROUTES)
+  },
+    {
+      path: 'suscripciones',
+      loadChildren: () =>
+        import('../../features/suscripciones/suscripciones.routes').then(m=> m.SUSCRIPCIONES_ROUTES)
   }
 
 //    {

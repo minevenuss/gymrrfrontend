@@ -1,5 +1,8 @@
 .login-page {
   text-align: center;
+  background-image: url('/assets/img/Equipamiento_gimnasio_accesorios_para_las_diferentes_salas.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .login-page h2 {

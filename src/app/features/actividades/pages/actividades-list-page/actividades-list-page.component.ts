@@ -32,22 +32,13 @@ export class ActividadesListPageComponent implements OnInit{
       this.showModal = true;
     }
 
-    onSave(data: any) {
-   
-    if(this.selectedActivity) {
-        const id = this.selectedActivity.IdEvento;
-        
-        if(!id) {
-            return;
-        }
-        
-        this.service.update(id, data);
-    } else {
+    onSave(data:any){
+      if(this.selectedActivity){
+        this.service.update(this.selectedActivity.IdEvento, data)
+      }else{
         this.service.create(data);
+      }
+
+      this.showModal = false;
     }
-setTimeout(() => {
-        this.showModal = false;
-        this.selectedActivity = null;
-    }, 500);
-}
 }

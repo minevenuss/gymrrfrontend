@@ -9,7 +9,7 @@
             <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
                 <div class="card-body p-0">
                   <app-cargo-table
-                  [Cargo]="service.cargos$()"
+                  [cargos]="service.cargos$()"
                   (edit) = "openEditModal($event)"
                   (delete) = "service.delete($event)">
                   </app-cargo-table>

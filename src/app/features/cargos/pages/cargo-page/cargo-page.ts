@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CargoService } from '../../services/cargo.service';
 import { CargoTableComponent } from "../../components/cargo-table.component/cargo-table.component";
 import { CargoModalComponent } from '../../components/cargo-modal.component/cargo-modal.component';
@@ -6,17 +6,18 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cargo-page',
+  standalone:true,
   imports: [CargoTableComponent, CargoModalComponent, CommonModule],
   templateUrl: './cargo-page.html',
   styleUrl: './cargo-page.css',
 })
-export class CargoPage {
-readonly service = inject(CargoService); //aqui inyectamos el servicio de actividades
+export class CargoPage implements OnInit{
+    readonly service = inject(CargoService); //aqui inyectamos el servicio de actividades
     showModal= false;
     selectedActivity: any=null;
 
 
-    ngONInit(){
+    ngOnInit(){
         this.service.loadAll(); //esto carga las acitividades al entrar a la pag
         setTimeout(() => {
     }, 1000);

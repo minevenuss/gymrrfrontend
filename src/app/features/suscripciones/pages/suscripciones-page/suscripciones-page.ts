@@ -3,7 +3,6 @@ import { SuscripcionesTableComponent } from "../../components/suscripciones-tabl
 import { SuscripcionesService } from '../../services/suscripciones.service';
 import { SuscripcionesModalComponent } from '../../components/suscripciones-modal.component/suscripciones-modal.component';
 import { CommonModule } from '@angular/common';
-import { Suscripcion } from '../../../../core/interfaces/suscripcion.interface';
 
 @Component({
   selector: 'app-suscripciones-page',
@@ -12,13 +11,13 @@ import { Suscripcion } from '../../../../core/interfaces/suscripcion.interface';
   templateUrl: './suscripciones-page.html',
   styleUrl: './suscripciones-page.css',
 })
-export class SuscripcionesPage {
+export class SuscripcionesPage implements OnInit{
   readonly service = inject(SuscripcionesService); //aqui inyectamos el servicio de actividades
     showModal= false;
     selectedActivity: any=null;
 
 
-    ngONInit(){
+    ngOnInit(){
         this.service.loadAll(); //esto carga las acitividades al entrar a la pag
         setTimeout(() => {
     }, 1000);

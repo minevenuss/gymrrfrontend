@@ -1,0 +1,79 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.parallax {
+  /* The image used */
+  background-image: url('/assets/img/vista-lateral-mujer-hombre-gimnasio-mascaras-medicas_23-2148766010.avif');
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.mainindex{
+  background-color: #ebebeb;
+  padding: 2rem;
+
+}
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url('/assets/img/descargar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    border-radius: 20px;
+}
+.intro{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+    opacity: 0.9;
+    background: linear-gradient(45deg, #DB2B39, #29335C, #F3A712);
+    background-size: 200% 400%;
+    animation: gradient-animation 15s ease infinite;
+    color: #ebebeb;
+}
+.introduccion {
+  background-color: #f3ba48;
+  border-radius: 20px;
+  margin: 2rem;
+}
+.servicios {
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.servicios2 {
+  justify-content: center;
+  text-align: center;
+}
+.servicios h1, h2, h3 {
+  color: #29335C;
+  margin: 1rem;
+}
+.card {
+  border-radius: 20px;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

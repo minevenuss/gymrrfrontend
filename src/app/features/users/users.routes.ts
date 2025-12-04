@@ -8,7 +8,7 @@ export const USERS_ROUTES: Routes = [
     {
         path:'',
         loadComponent: () => import('./pages/users-list-page/users-list-page.component').then(m=> m.UsersListPageComponent),
-        // canActivate: [roleGuard(['Admin', 'Empleado'])],
+         canActivate: [roleGuard(['Admin', 'Empleado'])],
         title: 'Usuarios - GymRR'
     }
 ];

@@ -8,7 +8,7 @@ export const INVENTARIO_ROUTES: Routes = [
     {
         path:'',
         loadComponent: () => import('./pages/inventario-list-page/inventario-list-page.component').then(m=> m.InventarioListPageComponent),
-        // canActivate: [roleGuard(['Admin', 'Empleado'])],
+        canActivate: [roleGuard(['Admin', 'Empleado'])],
         title: 'Inventario - GymRR'
     }
 ];

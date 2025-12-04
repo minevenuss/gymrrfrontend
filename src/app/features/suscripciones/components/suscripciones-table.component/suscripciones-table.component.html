@@ -1,0 +1,67 @@
+<div class="table-responsive">
+    <table class="table table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Estado</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha de Fin</th>
+                <th>Estado de Pago</th>
+                <th>ID Usuario</th>
+                <th>Nombre del Usuario</th>
+                <th>ID suscripcion</th>
+                <th>Suscripcion</th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="text-black">
+            <tr *ngFor="let suscripcion of suscripcion">
+                <td>{{ suscripcion.idSuscripcion }}</td>
+
+                <td>
+                  <span class="badge" [class]="(suscripcion.estado)">
+                        {{ suscripcion.estado }}
+                  </span>
+                </td>
+
+                <td>
+                    {{ suscripcion.fechaInicio }}
+                </td>
+
+                <td>{{ suscripcion.fechaFin }}</td>
+
+                <td>
+                    {{ suscripcion.estadoPago}}
+                </td>
+
+                <td>
+                    {{ suscripcion.idUsuario}}
+                </td>
+
+                <td>
+                    {{ suscripcion.NombreUsuario}}
+                </td>
+
+                <td>
+                    {{ suscripcion.idTipoSuscripcion}}
+                </td>
+
+                <td>
+                  {{ suscripcion.tipoSuscripcion }}
+                </td>
+
+                <td class="text-center">
+                    <button class="btn btn-sm btn-outline-primary me-2"
+                            (click)="onEdit(suscripcion)">
+                        Editar
+                    </button>
+
+                    <button class="btn btn-sm btn-outline-danger"
+                            (click)="onDelete(suscripcion.idSuscripcion)">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,4 +1,4 @@
 export interface CreateCargoDto {
-  nombre: string;
-  descripcion: string;
+  Nombre: string;
+  Descripcion: string;
 }

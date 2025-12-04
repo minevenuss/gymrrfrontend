@@ -13,7 +13,7 @@ USERS: {
 },
 
 CARGOS: {
-    GET_ALL: '/Cargos/ObtenerCargos/',
+    GET_ALL: '/Cargos/ObtenerCargos',
     GET_BY_ID: (id: number) => `/Cargos/ObtenerCargoPorID/${id}`,
     CREATE: '/Cargos/CrearCargo',
     UPDATE: (id: number) => `/Cargos/ActualizarCargo/${id}`,
@@ -21,7 +21,7 @@ CARGOS: {
 },
 
 SUSCRICPIONES: {
-    GET_ALL: '/Suscripcion/ObtenerSuscripciones',
+    GET_ALL: '/Suscripciones/ObtenerSuscripciones',
     GET_BY_ID: (id: number) => `/Suscripcion/ObtenerSuscripcionPorID/${id}`,
     CREATE: '/Suscripcion/CrearSuscripcion',
     UPDATE: (id: number) => `/Suscripcion/ActualizarSuscripcion/${id}`,
@@ -49,7 +49,7 @@ ACTIVIDADES: {
 },
 
 INVENTARIO: {
-    GET_ALL: '/Inventario/ObtenerInventario/',
+    GET_ALL: '/Inventario/ObtenerInventario',
     GET_BY_ID: (id:number) => `/Inventario/ObtenerInventarioPorID/${id}`,
     CREATE: '/Inventario/CrearInventario',
     UPDATE: (id: number) => `/Inventario/ActualizarInventario/${id}`,

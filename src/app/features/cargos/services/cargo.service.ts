@@ -1,6 +1,6 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { CargosApi } from '../api/cargos.api';
-import { Cargo } from '../../../core/interfaces/cargo.interface';
+import { Cargos } from '../../../core/interfaces/cargo.interface';
 import { CreateCargoDto } from '../types/create-cargo.dto';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class CargoService{
     private readonly api = inject(CargosApi); //aqui se inyecta la api
 
 
-    private cargos = signal<Cargo[]>([]);
+    private cargos = signal<Cargos[]>([]);
     private loading = signal(false);
 
     readonly cargos$ = computed(() => this.cargos());
@@ -33,8 +33,8 @@ export class CargoService{
 }
 
     //crea actividades
-    create(actividad: CreateCargoDto) {
-        this.api.create(actividad).subscribe({
+    create(cargo: CreateCargoDto) {
+        this.api.create(cargo).subscribe({
             next: (res) => res.success && this.loadAll()
         });
     }

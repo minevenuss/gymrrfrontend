@@ -10,9 +10,9 @@
         </thead>
         <tbody class="text-black">
             <tr *ngFor="let cargo of Cargo">
-                <td>{{ cargo.idCargo }}</td>
-                <td>{{ cargo.nombre }}</td>
-                <td>{{ cargo.descripcion }}</td>
+                <td>{{ cargo.IdCargo }}</td>
+                <td>{{ cargo.Nombre }}</td>
+                <td>{{ cargo.Descripcion }}</td>
                 <td class="text-center">
                     <button class="btn btn-sm btn-outline-primary me-2"
                             (click)="onEdit(cargo)">
@@ -20,7 +20,7 @@
                     </button>
 
                     <button class="btn btn-sm btn-outline-danger"
-                            (click)="onDelete(cargo.idCargo)">
+                            (click)="onDelete(cargo.IdCargo)">
                         Eliminar
                     </button>
                 </td>

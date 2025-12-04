@@ -11,12 +11,12 @@ export class AuthApi {
     private readonly http =inject(HttpClient);
     private readonly base = API_CONFIG.BASE_URL;
 
-    login(credentials: LoginDto) {
-        return this.http.post<ApiResponse<AuthResponse>>(
-            this.base + API_CONFIG.AUTH.LOGIN,
-            credentials
-        );
-    }
+   login(credentials: LoginDto) {
+    return this.http.post<ApiResponse<AuthResponse>>(
+        `${this.base}${API_CONFIG.AUTH.LOGIN}?useCookies=false`,
+        credentials
+    );
+}
     register(data: RegisterDto) {
         return this.http.post<ApiResponse<AuthResponse>>(
             this.base + API_CONFIG.AUTH.REGISTER,

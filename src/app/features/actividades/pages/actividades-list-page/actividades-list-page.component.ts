@@ -45,6 +45,9 @@ export class ActividadesListPageComponent implements OnInit{
     } else {
         this.service.create(data);
     }
-    this.showModal = false;
+setTimeout(() => {
+        this.showModal = false;
+        this.selectedActivity = null;
+    }, 500);
 }
 }

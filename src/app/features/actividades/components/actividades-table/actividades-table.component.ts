@@ -21,9 +21,9 @@ export class ActividadesTableComponent {
     }
     getEstadoBadge(estado: Actividades['Estado']): string {
         switch (estado) {
-            case 'Activa':     return 'bg-success';
-            case 'Pendiente':  return 'bg-warning text-dark';
+            case 'Pendiente':     return 'bg-warning text-dark';
             case 'Cancelada':  return 'bg-danger';
+            case 'Activa':  return 'bg-success';
             default:           return 'bg-secondary';
         }
 }

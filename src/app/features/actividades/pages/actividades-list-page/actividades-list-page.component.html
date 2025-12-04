@@ -17,6 +17,7 @@
             </div>
             <app-actividad-modal
             *ngIf="showModal"
+            
             [actividad]="selectedActivity"
             [isEdit]="!!selectedActivity"
             (save)="onSave($event)"

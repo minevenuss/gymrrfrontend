@@ -77,7 +77,7 @@ export class AuthService {
                             timerProgressBar: true,
                             showConfirmButton: false
                         }).then(() => {
-                            this.routes.navigate(['/actividades']);
+                            this.routes.navigate(['']);
                         });
                         
                         this.isLoading.set(false);

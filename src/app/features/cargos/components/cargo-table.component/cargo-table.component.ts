@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Cargo } from '../../../../core/interfaces/cargo.interface';
+import { Cargos } from '../../../../core/interfaces/cargo.interface';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,11 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cargo-table.component.css',
 })
 export class CargoTableComponent {
-    @Input() Cargo: Cargo[] = []; //recibe la lista de actividades desde afueraaa
-    @Output() edit = new EventEmitter<Cargo>(); //el event emitter como su nombre lo dice emite cuando se quiere editar una actividad
+    @Input() Cargo: Cargos[] = []; //recibe la lista de actividades desde afueraaa
+    @Output() edit = new EventEmitter<Cargos>(); //el event emitter como su nombre lo dice emite cuando se quiere editar una actividad
     @Output() delete = new EventEmitter<number>(); //este emite el id cuando quieren borrar
 
-    onEdit(item: Cargo){
+    onEdit(item: Cargos){
         this.edit.emit(item)
     }
     onDelete(id: number) {

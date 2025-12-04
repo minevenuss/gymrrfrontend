@@ -1,6 +1,6 @@
-export interface Cargo {
+export interface Cargos {
 
-    idCargo: number;
-    nombre: string;
-    descripcion?: string;
+    IdCargo: number;
+    Nombre: string;
+    Descripcion?: string;
 }

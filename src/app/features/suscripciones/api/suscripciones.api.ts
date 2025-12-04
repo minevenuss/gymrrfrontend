@@ -2,7 +2,6 @@ import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { API_CONFIG } from "../../../core/config/api.config";
 import { ApiResponse } from '../../../core/interfaces/api-response.interface';
-import { Cargo } from "../../../core/interfaces/cargo.interface";
 import { Suscripcion } from "../../../core/interfaces/suscripcion.interface";
 import { CreateSuscripcionDto } from "../types/create-suscripcion.dto";
 
